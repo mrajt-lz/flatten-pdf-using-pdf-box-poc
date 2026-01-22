@@ -11,17 +11,17 @@ fun main() {
     val outputPathJpeg = "src/main/resources/output/Output_Flattened_Jpeg.pdf"
 
     try {
-        // The Actual size of inout file is 7 KB
+        // The Actual size of inout file is 147 KB
         Files.deleteIfExists(Path.of(outputPath))
         Files.deleteIfExists(Path.of(outputPathJpeg))
 
-        // lossless flattened with RGB images
-        // file size 761 KB
+        // lossless flattened
+        // file size 1.3 MB
         flattenPdfHelper(inputPath, outputPath)
         println("PDF processing completed successfully!")
 
-        // Jpeg flattered with Gray images
-        // file size 421 KB
+        // Jpeg flattened
+        // file size 787 KB
         flattenPdfJpegHelper(inputPath, outputPathJpeg)
         println("PDF processing completed successfully with jpeg conversion")
     } catch (e: Exception) {

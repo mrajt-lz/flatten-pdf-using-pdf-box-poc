@@ -56,7 +56,7 @@ fun flattenPdfJpegHelper(
                 val image = renderer.renderImageWithDPI(
                     i,
                     dpi,
-                    ImageType.GRAY
+                    ImageType.RGB
                 )
 
                 val page = PDPage(
